@@ -354,7 +354,8 @@ class NameCartButtonComponent extends React.Component {
                                 <p className="cart-rename__explanation" id="name-cart-description" role="document">
                                     The cart name can comprise any characters you need to identify
                                     your carts to yourself. Every cart belonging to you must have a
-                                    unique name.
+                                    unique name. Titles of carts are a searchable public property.
+                                    Please consider that when naming your cart.
                                 </p>
                             </div>
                             <div className={`cart-rename__control-area${this.state.transferEnabled ? ' cart-rename__control-area--enabled' : ''}`}>
