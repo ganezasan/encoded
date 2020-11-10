@@ -15,16 +15,16 @@ const seriesList = {
         title: 'Treatment time',
         description: 'Model organisms are essential experimental platforms for discovering gene functions, defining protein and genetic networks, uncovering functional consequences of human genome variation, and for modeling human disease.',
     },
-    GeneSilencingSeries: {
-        title: 'Gene silencing',
-        description: 'Model organisms are essential experimental platforms for discovering gene functions, defining protein and genetic networks, uncovering functional consequences of human genome variation, and for modeling human disease.',
-    },
     TreatmentConcentrationSeries: {
         title: 'Treatment concentration',
         description: 'Model organisms are essential experimental platforms for discovering gene functions, defining protein and genetic networks, uncovering functional consequences of human genome variation, and for modeling human disease.',
     },
     ReplicationTimingSeries: {
         title: 'Replication timing',
+        description: 'Model organisms are essential experimental platforms for discovering gene functions, defining protein and genetic networks, uncovering functional consequences of human genome variation, and for modeling human disease.',
+    },
+    GeneSilencingSeries: {
+        title: 'Gene silencing',
         description: 'Model organisms are essential experimental platforms for discovering gene functions, defining protein and genetic networks, uncovering functional consequences of human genome variation, and for modeling human disease.',
     },
 };
@@ -111,6 +111,9 @@ const SeriesSearch = (props, context) => {
                                 className={`series-button${selectedSeries === s ? ' selected' : ''}`}
                                 onClick={() => handleClick(s)}
                             >
+                                <div className="series-icon">
+                                    <img src={`/static/img/series/${s.replace('Series', '')}.svg`} alt={s} />
+                                </div>
                                 {seriesList[s].title}
                             </button>
                         ))}
