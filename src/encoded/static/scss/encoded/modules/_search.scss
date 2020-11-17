@@ -440,45 +440,190 @@ $form-bg: #f3f3f3;
 }
 
 
-.series-container {
+.series-container, .tab-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    // option 2
-    border-bottom: 2px solid #a8a8a8;
+    background-color: white;
 }
+
+.series-container {
+    // overflow: scroll;
+    @media screen and (min-width: $screen-md-min) {
+        justify-content: center;
+        overflow: inherit;
+    }
+}
+
+.tab-nav {
+    justify-content: left;
+    border-bottom: 0;
+}
+
 .series-button {
-    // flex: 0 1 300px;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-
-    // option 1
-    // .series-icon {
-    //     padding-bottom: 5px;
-    // }
-    // font-family: 'Oswald';
-    // background: #e7e7e7;
-    // font-size: 18px;
-    // line-height: 1.3;
-    // &.selected {
-    //     border: 2px solid #a8a8a8;
-    //     background: #c9c9c9;
-    // }
-
-    // option 2
-    flex: 0 1 220px;
-    font-size: 18px;
+    flex: 0 1 214px;
     font-family: 'Oswald';
-    margin: 5px 5px -2px 5px;
-    border: none;
-    z-index: -1;
-    &.selected {
+}
+
+.nav-tabs {
+    flex: 0 1 auto;
+    top: 0;
+    &:after {
+        border-bottom: 2px solid #a8a8a8;
+    }
+}
+
+.tab-nav {
+    margin-bottom: 10px;
+}
+
+//
+.matrix__data-wrapper {
+    .series-border {
+        bottom: 0px;
+        @media screen and (min-width: $screen-md-min) {
+            bottom: -1px;
+        }
+        // position: relative;
+    }
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    .series-border {
+        bottom: 0;
+    }
+}
+
+.scroll-container-inner {
+    overflow: scroll;
+}
+
+.series-container {
+    overflow: visible;
+    position: relative;
+}
+
+.series-search {
+    center {
+        h1 {
+            @media screen and (max-width: $screen-md-min) {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.series-button, .tab-nav-Homosapiens .nav-tabs li, .tab-nav-Musmusculus .nav-tabs li {
+    font-family: 'Oswald';
+    font-size: 1.3rem;
+    font-weight: 300;
+    @media screen and (max-width: $screen-md-min) {
+        font-size: 1rem;
+    }
+}
+
+.series-button, .nav-tabs li {
+    padding: 0;
+    margin: 5px;
+    border-radius: 3px;
+    color: #000;
+    margin: 5px 5px 0px 5px;
+    @media screen and (min-width: $screen-md-min) {
+        margin: 5px 5px -1px 5px;
+    }
+    background: #efefef;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #a8a8a8;
+    &:hover {
+        background: #E2E2E2;
+    }
+    a {
+        position: relative;
+        &:before {
+            content : "";
+            position: absolute;
+            left    : -2px;
+            bottom  : -2px;
+            height  : 2px;
+            width   : 2px;  /* or 100px */
+            border-bottom: 2px solid #a8a8a8;
+        }
+        &:after {
+            content : "";
+            position: absolute;
+            right    : -2px;
+            bottom  : -2px;
+            height  : 2px;
+            width   : 2px;  /* or 100px */
+            border-bottom: 2px solid #a8a8a8;
+        }
+    }
+    .button-inner {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        &:before {
+            content : "";
+            position: absolute;
+            left    : -2px;
+            bottom  : -2px;
+            height  : 2px;
+            width   : 2px;  /* or 100px */
+            border-bottom: 2px solid #a8a8a8;
+        }
+        &:after {
+            content : "";
+            position: absolute;
+            right    : -2px;
+            bottom  : -2px;
+            height  : 2px;
+            width   : 2px;  /* or 100px */
+            border-bottom: 2px solid #a8a8a8;
+        }
+    }
+    &.selected, &.active {
         border: 2px solid #a8a8a8;
         background: white;
         border-bottom: white 2px solid;
-        z-index: 1000;
+        z-index: 9;
+        a {
+            border: none;
+        }
+
+    }
+    .series-icon {
+        width: 60px;
+        margin: auto;
+        img {
+            width: 60px;
+        }
+    }
+}
+
+.matrix__data-wrapper {
+    border: 0;
+}
+
+.series-border {
+    border-bottom: 2px solid #a8a8a8;
+    margin-top: 0;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @media screen and (min-width: $screen-md-min) {
+        bottom: -1px;
+    }
+}
+
+.tab-description {
+    padding: 20px 10px;
+    font-size: 0.8rem;
+    @media screen and (min-width: $screen-md-min) {
+        padding: 20px 0;
+        font-size: 1rem;
     }
 }

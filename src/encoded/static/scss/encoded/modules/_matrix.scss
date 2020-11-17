@@ -61,27 +61,17 @@ $matrix-border-color: #f0f0f0;
             font-size: 0.8rem;
         }
     }
-    .tab-nav-Homosapiens {
-        border-bottom: 2px solid $Homo-sapiens;
-    }
-    .tab-nav-Musmusculus {
-        border-bottom: 2px solid $Mus-musculus;
-    }
     .nav-tabs {
         li {
-            margin-bottom: -1px;
-            &.active {
-                border-bottom: 0;
-                .organism-button {
-                    font-weight: 800;
-                }
-            }
+            // margin-bottom: -1px;
+            // &.active {
+            //     border-bottom: 0;
+            // }
             .organism-button {
                 background-color: unset;
                 border: 0;
-                padding: 3px 10px;
+                // padding: 3px 10px;
                 margin: 0;
-                font-weight: 600;
                 &:hover {
                     background-color: unset;
                 }
@@ -89,37 +79,13 @@ $matrix-border-color: #f0f0f0;
             a[disabled] {
                 pointer-events: none;
                 cursor: unset;
-                opacity: 0.7;
-                .organism-button {
-                    color: #828282;
-                }
-                img {
-                    opacity: 0.5;
-                }
-            }
-        }
-        .Homosapiens-tab {
-            &.active {
-                a {
-                    border-right: 3px solid $Homo-sapiens;
-                    border-left: 3px solid $Homo-sapiens;
-                    border-top: 3px solid $Homo-sapiens;
-                }
-            }
-            .organism-button {
-                color: $Homo-sapiens;
-            }
-        }
-        .Musmusculus-tab {
-            &.active {
-                a {
-                    border-right: 3px solid $Mus-musculus;
-                    border-left: 3px solid $Mus-musculus;
-                    border-top: 3px solid $Mus-musculus;
-                }
-            }
-            .organism-button {
-                color: $Mus-musculus;
+                // opacity: 0.7;
+                // .organism-button {
+                //     color: #828282;
+                // }
+                // img {
+                //     opacity: 0.5;
+                // }
             }
         }
     }

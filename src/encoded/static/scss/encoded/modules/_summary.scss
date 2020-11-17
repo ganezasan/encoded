@@ -624,14 +624,14 @@ $results-background: #E9E9E9;
 }
 
 .organism-button {
-    font-size: 1.1rem;
-    padding: 5px 10px 3px;
+    font-size: 1.3rem;
+    // padding: 5px 10px 3px;
     margin-right: 5px;
     border-radius: 3px;
-    font-weight: 400;
+    // font-weight: 400;
     background: none;
     @media screen and (max-width: $screen-sm-min) {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin: 5px;
         padding: 5px 5px 3px;
     }
@@ -642,57 +642,13 @@ $results-background: #E9E9E9;
     img {
         vertical-align: middle;
         width: 30px;
-        margin-right: 5px;
+        margin-right: 7px;
         @media screen and (max-width: $screen-md-min) {
             display: none;
         }
     }
     .button-term {
         padding-left: 5px;
-    }
-    &.Homo-sapiens {
-        border: 2px solid $Homo-sapiens;
-        color: $Homo-sapiens;
-        &.active {
-            background-color: $Homo-sapiens;
-            color: white;
-        }
-        &:hover:not(.active) {
-            background-color: lighten($Homo-sapiens, 40%);
-        }
-    }
-    &.Mus-musculus {
-        border: 2px solid $Mus-musculus;
-        color: $Mus-musculus;
-        &.active {
-            background-color: $Mus-musculus;
-            color: white;
-        }
-        &:hover:not(.active) {
-            background-color: lighten($Mus-musculus, 40%);
-        }
-    }
-    &.Caenorhabditis-elegans {
-        border: 2px solid $Caenorhabditis-elegans;
-        color: darken($Caenorhabditis-elegans, 7%);
-        &.active {
-            background-color: $Caenorhabditis-elegans;
-            color: white;
-        }
-        &:hover:not(.active) {
-            background-color: lighten($Caenorhabditis-elegans, 40%);
-        }
-    }
-    &.Drosophila-melanogaster {
-        border: 2px solid $Drosophila-melanogaster;
-        color: $Drosophila-melanogaster;
-        &.active {
-            background-color: $Drosophila-melanogaster;
-            color: white;
-        }
-        &:hover:not(.active) {
-            background-color: lighten($Drosophila-melanogaster, 40%);
-        }
     }
 }
 

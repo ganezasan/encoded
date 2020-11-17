@@ -100,26 +100,32 @@ const SeriesSearch = (props, context) => {
     return (
         <div className="layout">
             <div className="layout__block layout__block--100">
-                <div className="ricktextblock block" data-pos="0,0,0">
+                <div className="ricktextblock block series-search" data-pos="0,0,0">
                     <center>
                         <h1>Functional genomics series</h1>
                     </center>
-                    <div className="series-container">
-                        {Object.keys(seriesList).map(s => (
-                            <button
-                                key={s}
-                                className={`series-button${selectedSeries === s ? ' selected' : ''}`}
-                                onClick={() => handleClick(s)}
-                            >
-                                <div className="series-icon">
-                                    <img src={`/static/img/series/${s.replace('Series', '')}.svg`} alt={s} />
-                                </div>
-                                {seriesList[s].title}
-                            </button>
-                        ))}
+                    <div className="scroll-container">
+                        <div className="scroll-container-inner">
+                            <div className="series-container">
+                                {Object.keys(seriesList).map(s => (
+                                    <button
+                                        key={s}
+                                        className={`series-button${selectedSeries === s ? ' selected' : ''}`}
+                                        onClick={() => handleClick(s)}
+                                    >
+                                        <div className="button-inner">
+                                            <div className="series-icon">
+                                                <img src={`/static/img/series/${s.replace('Series', '')}.svg`} alt={s} />
+                                            </div>
+                                            {seriesList[s].title}
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="series-border" />
                     </div>
-                    <h2>{seriesList[selectedSeries].title}</h2>
-                    <div>{seriesList[selectedSeries].description}</div>
+                    <div className="tab-description">{seriesList[selectedSeries].description}</div>
                     <div
                         className="series-wrapper"
                         onClick={(e) => handleLinks(e)}
