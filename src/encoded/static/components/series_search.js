@@ -97,6 +97,8 @@ const SeriesSearch = (props, context) => {
         handleClick(selectedSeries);
     }, [handleClick, selectedSeries]);
 
+    console.log(seriesData);
+
     return (
         <div className="layout">
             <div className="layout__block layout__block--100">
